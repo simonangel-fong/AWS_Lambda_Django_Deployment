@@ -1,0 +1,8 @@
+{% extends "layout/base.html" %} {% block main %}
+
+<div class="container">
+  <h4>Brand: {{car.brand|capfirst}}</h4>
+  <p>Model: {{car.model}}</p>
+  <a href="{% url 'AppCar:delete' car.pk %}" class="btn btn-danger">Delete</a>
+</div>
+{% endblock %}

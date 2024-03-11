@@ -1,0 +1,19 @@
+{% extends "layout/base.html" %} {% block main %}
+
+<div class="d-flex p-3">
+  <h4 class="h4 me-auto">Car List</h4>
+  <a class="btn btn-primary" href="{% url 'AppCar:create' %}">Create</a>
+</div>
+
+<ul class="list-group">
+  {% for car in car_list %}
+  <li class="list-group-item">
+    <h5>
+      <a href="{% url 'AppCar:detail' car.pk %}">{{car.brand|capfirst}}</a>
+    </h5>
+    <p>{{car.model}}</p>
+  </li>
+  {% endfor %}
+</ul>
+
+{% endblock %}
