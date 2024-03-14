@@ -1,6 +1,7 @@
 .vscode/
 zappa_settings.json
 .DS_Store
+*.cnf
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
