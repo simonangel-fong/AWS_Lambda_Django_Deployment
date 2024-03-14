@@ -1,0 +1,12 @@
+{% extends "layout/base.html" %} {% block main %} {% load django_bootstrap5 %}
+
+<div class="container p-4">
+  <form method="post">
+    {% csrf_token %} {% bootstrap_form form %}
+    <h4>Delete Confirm?</h4>
+    <p>{{model}}</p>
+    <button class="btn btn-danger" type="submit">Delete</button>
+  </form>
+</div>
+
+{% endblock %}
